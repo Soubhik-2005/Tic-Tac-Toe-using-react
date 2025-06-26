@@ -49,21 +49,21 @@ const App =() =>{
 
 
   return (
-    <div className="flex flex-col justify-center w-full items-center bg-gray-900 h-screen overflow-hidden relative">
+    <div className="flex flex-col justify-center w-screen items-center bg-gray-900 h-screen overflow-hidden relative">
 
-    <h1 className="text-white text-6xl font-bold"> Tic-Tac-Toe</h1>
-    <div  className={ `${checkWinner(board)?" text-green-400 drop-shadow-lg text-2xl my-[20px] animate-bounce":"text-white text-2xl my-[20px]"}`}>{getGameStatus()}</div>
+    <h1 className="text-white text-5xl font-bold max-sm:text-3xl"> Tic-Tac-Toe</h1>
+    <div  className={ `${checkWinner(board)?" text-green-400 drop-shadow-lg text-xl my-[10px] animate-bounce max-sm:text-md":"text-white text-xl my-[10px] max-sm:text-md" }`}>{getGameStatus()}</div>
     <div className="grid grid-cols-3 gap-2">
        {board.map((square,index)=>{
          return(
       <button
        index={index} 
        onClick={()=>handleClick(index)}
-      className="w-[170px] h-[170px] bg-blue-300  border-black shadow-blue-200 rounded-md text-5xl font-bold hover:bg-blue-200 hover:border-white transition-colors duration-500 ease-in-out" >{square} </button>)
+      className="w-[120px] h-[120px] bg-blue-300  border-black shadow-blue-200 rounded-md text-5xl font-bold hover:bg-blue-200 hover:border-white transition-colors duration-500 ease-in-out max-sm:w-[100px] max-sm:h-[100px]" >{square} </button>)
 
     })}
       </div>
-    <div className="text-white bg-blue-400 px-52 rounded-md py-4 my-4 text-2xl">
+    <div className="text-white bg-blue-400 px-32 rounded-md py-4 my-4 text-2xl max-sm:px-29 max-sm:text-lg">
       <button onClick={()=>resetGame()}>New Game</button>
       </div>
     </div>
