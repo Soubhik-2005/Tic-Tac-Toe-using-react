@@ -49,7 +49,7 @@ const App =() =>{
 
 
   return (
-    <div className="flex flex-col justify-center w-screen items-center bg-gray-900 h-screen overflow-hidden max-sm:overflow-hidden relative">
+    <div className="flex flex-col justify-center w-screen items-center bg-gray-900 h-screen overflow-hidden max-sm:overflow-y-hidden relative">
 
     <h1 className="text-white text-5xl font-bold max-sm:text-3xl"> Tic-Tac-Toe</h1>
     <div  className={ `${checkWinner(board)?" text-green-400 drop-shadow-lg text-xl my-[10px] animate-bounce max-sm:text-md":"text-white text-xl my-[10px] max-sm:text-md" }`}>{getGameStatus()}</div>
